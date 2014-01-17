@@ -1,6 +1,7 @@
 #pragma once
 #include <string>
 
+using namespace std;
 
 // CVerifyDlg 对话框
 class CTrain;
@@ -14,7 +15,7 @@ public:
 	virtual ~CVerifyDlg();
 
 // 对话框数据
-	enum { IDD = IDD_YZDLG };
+	enum { IDD = IDD_VERIFY_DLG };
 
 protected:
 	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV 支持
@@ -22,9 +23,9 @@ protected:
 	DECLARE_MESSAGE_MAP()
 public:
 	CTrain* m_pTrain;
-	std::string yzcode;
-    std::string file_path;
-	afx_msg void OnBnClickedButton1();
+	string m_sVercode;
+    string m_spath;
+	afx_msg void OnBnClickedOK();
 	virtual BOOL OnInitDialog();
 	afx_msg void OnPaint();
 	afx_msg void OnStnClickedPic2();

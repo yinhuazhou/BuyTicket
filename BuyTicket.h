@@ -10,7 +10,6 @@
 
 #include "resource.h"		// 主符号
 
-
 // CBuyTicketApp:
 // 有关此类的实现，请参阅 BuyTicket.cpp
 //
@@ -29,4 +28,5 @@ public:
 	DECLARE_MESSAGE_MAP()
 };
 
+int ImgConvert(LPCSTR iFName,LPCSTR oFName,LPCSTR sType);
 extern CBuyTicketApp theApp;

@@ -323,27 +323,27 @@ void client::handle_header_read(boost::system::error_code err,size_t bytes_trans
 
             if(protocol_==1) {
 
-                boost::asio::async_read(ssl_sock,respone_,boost::asio::transfer_at_least(read_size)
-                                        ,boost::bind(&client::handle_body_read,this,boost::asio::placeholders::error
-                                                     ,boost::asio::placeholders::bytes_transferred));
+                boost::asio::async_read(ssl_sock,respone_,boost::asio::transfer_at_least(read_size),
+					boost::bind(&client::handle_body_read,this,boost::asio::placeholders::error,
+					boost::asio::placeholders::bytes_transferred));
 
             } else {
-                boost::asio::async_read(socket_,respone_,boost::asio::transfer_at_least(read_size)
-                                        ,boost::bind(&client::handle_body_read,this,boost::asio::placeholders::error
-                                                     ,boost::asio::placeholders::bytes_transferred));
+                boost::asio::async_read(socket_,respone_,boost::asio::transfer_at_least(read_size),
+					boost::bind(&client::handle_body_read,this,boost::asio::placeholders::error,
+					boost::asio::placeholders::bytes_transferred));
             }
 
         } else if(m_respone->header.find("Transfer-Encoding")=="chunked") {
             if(protocol_==1) {
 
-                boost::asio::async_read_until(ssl_sock,respone_,"\r\n"
-                                              ,boost::bind(&client::handle_chunk_read,this,boost::asio::placeholders::error
-                                                      ,boost::asio::placeholders::bytes_transferred));
+                boost::asio::async_read_until(ssl_sock,respone_,"\r\n",
+					boost::bind(&client::handle_chunk_read,this,boost::asio::placeholders::error,
+					boost::asio::placeholders::bytes_transferred));
 
             } else {
-                boost::asio::async_read_until(socket_,respone_,"\r\n"
-                                              ,boost::bind(&client::handle_chunk_read,this,boost::asio::placeholders::error
-                                                      ,boost::asio::placeholders::bytes_transferred));
+                boost::asio::async_read_until(socket_,respone_,"\r\n",
+					boost::bind(&client::handle_chunk_read,this,boost::asio::placeholders::error,
+					boost::asio::placeholders::bytes_transferred));
             }
         }
     } else {

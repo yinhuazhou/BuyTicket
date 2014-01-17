@@ -17,6 +17,10 @@
       <UniqueIdentifier>{a7537191-b625-41df-b4ee-96f19ef4b0f3}</UniqueIdentifier>
       <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
     </Filter>
+    <Filter Include="Quick">
+      <UniqueIdentifier>{e58347e7-4ec3-43dd-a209-6aa6dbda616d}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;cpp;c;cc;cxx</Extensions>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -38,9 +42,6 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="xxtea.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Ticket.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="Train.h">
@@ -85,6 +86,21 @@
     <ClInclude Include="cJSON.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Quick\QuickEdit.h">
+      <Filter>Quick</Filter>
+    </ClInclude>
+    <ClInclude Include="Quick\QuickList.h">
+      <Filter>Quick</Filter>
+    </ClInclude>
+    <ClInclude Include="Quick\theme.h">
+      <Filter>Quick</Filter>
+    </ClInclude>
+    <ClInclude Include="Quick\ThemeLib.h">
+      <Filter>Quick</Filter>
+    </ClInclude>
+    <ClInclude Include="Ticket.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BuyTicket.cpp">
@@ -107,6 +123,15 @@
     </ClCompile>
     <ClCompile Include="cJSON.cpp">
       <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Quick\QuickEdit.cpp">
+      <Filter>Quick</Filter>
+    </ClCompile>
+    <ClCompile Include="Quick\QuickList.cpp">
+      <Filter>Quick</Filter>
+    </ClCompile>
+    <ClCompile Include="Quick\theme.cpp">
+      <Filter>Quick</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

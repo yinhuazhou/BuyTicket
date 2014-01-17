@@ -61,6 +61,9 @@
       <BufferSecurityCheck>true</BufferSecurityCheck>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <AdditionalIncludeDirectories>
+      </AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -130,10 +133,14 @@
     <ClInclude Include="echttp\request.hpp" />
     <ClInclude Include="echttp\respone.hpp" />
     <ClInclude Include="echttp\url.hpp" />
+    <ClInclude Include="Quick\QuickEdit.h" />
+    <ClInclude Include="Quick\QuickList.h" />
+    <ClInclude Include="Quick\theme.h" />
+    <ClInclude Include="Quick\ThemeLib.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
-    <ClInclude Include="Ticket.hpp" />
+    <ClInclude Include="Ticket.h" />
     <ClInclude Include="Train.h" />
     <ClInclude Include="VerifyDlg.h" />
     <ClInclude Include="xxtea.h" />
@@ -142,6 +149,9 @@
     <ClCompile Include="BuyTicket.cpp" />
     <ClCompile Include="BuyTicketDlg.cpp" />
     <ClCompile Include="cJSON.cpp" />
+    <ClCompile Include="Quick\QuickEdit.cpp" />
+    <ClCompile Include="Quick\QuickList.cpp" />
+    <ClCompile Include="Quick\theme.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>

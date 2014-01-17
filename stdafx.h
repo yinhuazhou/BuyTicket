@@ -32,7 +32,24 @@
 #include <afxcontrolbars.h>     // 功能区和控件条的 MFC 支持
 
 #define  CONFIG_PATH ".\\12306"
+#define  LOGIN_INIT	"login/init"
+#define  LEFT_TICKET_INIT "leftTicket/init"
+#define  CONFIRM_PASS	"confirmPassenger"
+#define  CONFIRM_PASS_INIT CONFIRM_PASS"/initDc"
+#define  CONFIRM_PASS_SQUEUE CONFIRM_PASS"/confirmSingleForQueue"
+#define  DYNAMIC_LOGINJS "dynamicJs/loginJs"
+#define  DYNAMIC_QUERYJS "dynamicJs/queryJs"
+
+//#define USEXPTHEMES
+
+#ifndef USEXPTHEMES
+#define QUICKLIST_NOXPTHEME
+#endif
+
+// #define QUICKLIST_NOPROGRESSBAR
+// #define 
 #include <io.h>
+#define ARRAY_SIZE(x) (sizeof(x) / sizeof((x)[0]))
 
 #ifdef _UNICODE
 #if defined _M_IX86
